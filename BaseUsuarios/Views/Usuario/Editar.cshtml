@@ -1,0 +1,69 @@
+﻿@using BaseUsuarios.Enums
+@model UsuarioModel
+@{
+    ViewData["Title"] = "Editar Contato";
+}
+<div class="text-center">
+
+    <h1 class="display-4"> Alterar Usuário </h1>
+
+</div>
+
+<form asp-controller="Usuario" asp-action="Alterar" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o seu Nome">
+        @Html.ValidationMessageFor(x => x.Nome)
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="text" asp-for="Email" class="form-control" placeholder="Digite o seu Email">
+        @Html.ValidationMessageFor(x => x.Email)
+    </div>
+    <div class="form-group">
+        <label for="Telefone">Telefone</label>
+        <input type="text" asp-for="Telefone" class="form-control" placeholder="Digite o seu Telefone">
+        @Html.ValidationMessageFor(x => x.Telefone)
+    </div>
+
+    <div class="form-group">
+        <label for="CPF">CPF</label>
+        <input type="text" asp-for="CPF" class="form-control" placeholder="Digite o seu cpf">
+        @Html.ValidationMessageFor(x => x.CPF)
+    </div>
+
+    <div class="form-group">
+        <label for="Login">Login</label>
+        <input type="text" asp-for="Login" class="form-control" placeholder="Digite o seu login">
+        @Html.ValidationMessageFor(x => x.Login)
+    </div>
+
+    <div class="form-group">
+        <label for="Nomedamae">Nome da mãe</label>
+        <input type="text" asp-for="NomeDaMae" class="form-control" placeholder="Digite o nome da mãe">
+        @Html.ValidationMessageFor(x => x.NomeDaMae)
+    </div>
+
+    <div class="form-group">
+        <label for="Senha">Senha</label>
+        <input type="text" asp-for="Senha" class="form-control" placeholder="Digite a sua senha">
+        @Html.ValidationMessageFor(x => x.Senha)
+    </div>
+
+    <div class="form-group">
+        <label for="DataDeNascimento">Data de Nascimento</label>
+        <input type="date" asp-for="DataDeNascimento" class="form-control" placeholder="Selecione sua data de nascimento">
+        @Html.ValidationMessageFor(x => x.DataDeNascimento)
+
+    </div>
+
+
+    <br />
+
+    <button type="submit" class="btn btn-primary btn-block">Alterar</button>
+    <a class="btn btn-secondary btn-block" asp-controller="Usuario" asp-action="Index" role="button">Voltar</a>
+
+</form>

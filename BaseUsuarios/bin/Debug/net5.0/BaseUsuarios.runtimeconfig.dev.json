@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\kaioz\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\kaioz\\.nuget\\packages"
+    ]
+  }
+}
